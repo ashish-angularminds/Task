@@ -128,7 +128,7 @@ Main CSS
 body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    background: #e4fde1;
+    background: linear-gradient(95deg, #6ae1ba, #e4fde1, #e4fde1, #6ae1ba);
 }
 
 html, body, section {
@@ -268,15 +268,31 @@ body::-webkit-scrollbar {
 .column-2{
 }
 
+.center-line{
+    grid-column: 6;
+    grid-row: 1/10;
+    width: 1px;
+    height: 100%;
+    background-color: #000000;   
+}
+
 .c1-section-1 div{
     grid-column: 4/8;
-    grid-row: 4/10;
-    margin: 20px 0 40px 0;
-    box-shadow: 0 0 8px #0000002e;
+    grid-row: 4/8;
+    box-shadow: 0 0 18px #0000002e;
+    margin: auto;
+    padding: 25px;
+    border-radius: 5px;
+    /* background: linear-gradient(207deg, #e4fde1, #fff, 70%); */
+    background: linear-gradient(25deg, #e4fde1, #6ae1ba, #e4fde1);
 }
 
 .c1-section-1 div p{
-    margin: 25px 0px;
+    margin: 25px 50px;
+}
+
+.c1-section-1 div a{
+    margin: 25px 50px;
 }
 
 .c1-section-1 div p img{
