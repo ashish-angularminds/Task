@@ -270,21 +270,29 @@ body::-webkit-scrollbar {
 
 .center-line{
     grid-column: 6;
-    grid-row: 1/10;
+    grid-row: 1/11;
     width: 1px;
     height: 100%;
     background-color: #000000;   
 }
 
+.left-line{
+    grid-column: 5;
+    grid-row: 6;
+    width: 150px;
+    height: 1px;
+    background-color: #000000;   
+}
+
 .c1-section-1 div{
-    grid-column: 4/8;
-    grid-row: 4/8;
+    grid-column: 2/6;
+    grid-row: 4/4;
     box-shadow: 0 0 18px #0000002e;
     margin: auto;
     padding: 25px;
     border-radius: 5px;
     /* background: linear-gradient(207deg, #e4fde1, #fff, 70%); */
-    background: linear-gradient(25deg, #e4fde1, #6ae1ba, #e4fde1);
+    background: linear-gradient(90deg, #e4fde1, #6ae1ba);
 }
 
 .c1-section-1 div p{
