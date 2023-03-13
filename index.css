@@ -128,7 +128,8 @@ Main CSS
 body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    background: linear-gradient(95deg, #6ae1ba, #e4fde1, #e4fde1, #6ae1ba);
+    background-color: #e4fde1;
+    /* background: linear-gradient(95deg, #6ae1ba, #e4fde1, #e4fde1, #6ae1ba); */
 }
 
 html, body, section {
@@ -154,8 +155,11 @@ body::-webkit-scrollbar {
     display: grid;
     grid-template-rows: 1;
     grid-template-columns: 20% 60% 20%;
-    background: linear-gradient(45deg, #e4fde1, #6ae1ba, #e4fde1);
-    box-shadow: 0 0 4px #525252;
+    background: rgba(106, 225, 186, 0.43);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.2px);
+    -webkit-backdrop-filter: blur(14.2px);
+    border: 1px solid rgba(106, 225, 186, 0.05);
     position: fixed;
     top: 0;
 }
@@ -245,16 +249,9 @@ body::-webkit-scrollbar {
     animation: titleloading .5s linear;
 }
 .image img{
-    width: 240px;
+    width: 70%;
     overflow:visible;
     border-radius: 50%;
-    box-shadow:
-    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-    0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -268,47 +265,54 @@ body::-webkit-scrollbar {
 .column-2{
 }
 
-.center-line{
-    grid-column: 6;
-    grid-row: 1/11;
-    width: 1px;
-    height: 100%;
-    background-color: #000000;   
-}
 
-.left-line{
-    grid-column: 5;
-    grid-row: 6;
-    width: 150px;
-    height: 1px;
-    background-color: #000000;   
+
+.c1-section-1{
+    background-image: url(line.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .c1-section-1 div{
-    grid-column: 2/6;
-    grid-row: 4/4;
-    box-shadow: 0 0 18px #0000002e;
+    grid-column: 4/8;
+    grid-row: 3/10;
+    display: flex;
+    flex-direction: column;
+    background-image: url(card\ bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.c1-section-1 div div{
+    width: 60%;
     margin: auto;
-    padding: 25px;
-    border-radius: 5px;
-    /* background: linear-gradient(207deg, #e4fde1, #fff, 70%); */
-    background: linear-gradient(90deg, #e4fde1, #6ae1ba);
+    padding: 20px;
+    background: rgba(106, 225, 186, 0.08);
+    background: rgba(106, 225, 186, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    border: 1px solid rgba(106, 225, 186, 0.07);
 }
 
 .c1-section-1 div p{
-    margin: 25px 50px;
+    margin: 15px 50px;
 }
 
 .c1-section-1 div a{
-    margin: 25px 50px;
+    margin: 15px 50px;
 }
 
 .c1-section-1 div p img{
     margin: 0px 10px;
+    width: 25px;
+    height: 25px;
 }
 
 .c1-section-1 div a img{
     margin: 0px 10px;
+    width: 25px;
+    height: 25px;
 }
 
 .num-sec-2{
@@ -332,26 +336,27 @@ body::-webkit-scrollbar {
 
 
 
-.c1-section-2 h2{
+.c1-section-1 div div h2{
     margin: 0 auto;
 }
 
-.c1-section-2 ul{
+.c1-section-1 div div ul{
     margin: 0 auto !important;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.c1-section-2 ul li{
+.c1-section-1 div div ul li{
     margin: 20px 0;
 }
 
 .bar-1{
+    display: flex;
     width: 200px;
     height: 5px;
     border-radius: 5px;
-    background-color: #f5cac3;
+    background-color: #6AE1BA;
     position: relative;
 }
 
@@ -368,7 +373,7 @@ body:target .bar-2{
 }
 .bar-2{
     position: absolute;
-    background-color: #f7ede2;
+    background-color: #9af8cc;
     width: 100px;
     height: 5px;
     border-radius: 5px;
