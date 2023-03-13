@@ -17,10 +17,10 @@
         </div>
         <div class="page-list">
             <ul>
-                <li>Home</li>
-                <li>Contacts</li>
-                <li>Eduction</li>
-                <li>Skills</li>
+                <li><a href="#home"><span></span>Home</a></li>
+                <li><a href="#Contacts"><span></span>Contacts</a></li>
+                <li><a href="#Skills"><span></span>Skills</a></li>
+                <li><a href="#Eduction"><span></span>Eduction</a></li>
                 <li></li>
                 <li></li>
             </ul>
@@ -32,7 +32,7 @@
     <!-- Navbar End -->
 
     <!-- First Page -->
-    <section class="tit">
+    <section id="home" class="tit">
         <div class="title-section">
             <div class="title">
                 <p class="name">Izuku <b>Midoriya</b></p>
@@ -48,7 +48,7 @@
     <!-- Second Page -->
     <div class="body-section">
         <div class="column-1">
-            <section class="title-section c1-section-1">
+            <section id="Contacts" class="title-section c1-section-1">
                 <div class="obj1">
                     <div>
                         <p class="num-sec-2"><img src="phone-book.png">7447590262</p>
@@ -59,26 +59,68 @@
                 </div>
             </section>
             
-            <section class="title-section c1-section-1">
+            <section id="Skills" class="title-section c1-section-1">
                 <div>
                     <div>
                         <h2>Skills</h2>
                         <ul>
                             <li>
                                 HTML
-                                <span class="bar-1"><span class="bar-2"></span></span>
+                                <span class="bar-1"><span id="bar1" class="bar-2"></span></span>
                             </li>
                             <li>
                                 CSS
-                                <span class="bar-1"><span class="bar-2"></span></span>
+                                <span class="bar-1"><span id="bar2" class="bar-2"></span></span>
                             </li>
                             <li>
                                 JS
-                                <span class="bar-1"><span class="bar-2"></span></span>
+                                <span class="bar-1"><span id="bar3" class="bar-2"></span></span>
                             </li>
                         </ul> 
                     </div>
                 </div>
+                <script type="text/javascript">
+                    // get the element to animate
+                    var element1 = document.getElementById('bar1');
+                    var element2 = document.getElementById('bar2');
+                    var element3 = document.getElementById('bar3');
+                    var elementHeight = element1.clientHeight;
+
+                    // listen for scroll event and call animate function
+                    document.addEventListener('scroll', animate);
+
+                    // check if element is in view
+                    function inView() {
+                    // get window height
+                    var windowHeight = window.innerHeight;
+                    // get number of pixels that the document is scrolled
+                    var scrollY = window.scrollY || window.pageYOffset;
+                    
+                    // get current scroll position (distance from the top of the page to the bottom of the current viewport)
+                    var scrollPosition = scrollY + windowHeight;
+                    // get element position (distance from the top of the page to the bottom of the element)
+                    var elementPosition = element1.getBoundingClientRect().top + scrollY + elementHeight;
+                    
+                    // is scroll position greater than element position? (is element in view?)
+                    if (scrollPosition > elementPosition) {
+                        return true;
+                    }
+                    
+                    return false;
+                    }
+
+                    // animate element when it is in view
+                    function animate() {
+                    // is element in view?
+                    if (inView()) {
+                        // element is in view, add class to element
+                        element1.classList.toggle('bar-anim');
+                        element2.classList.toggle('bar-anim');
+                        element3.classList.toggle('bar-anim');
+                    }
+                    }
+
+                </script>
             </section>
             <div class="c1-section-3"></div>
             <div class="c1-section-4"></div>
