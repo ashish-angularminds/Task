@@ -128,13 +128,14 @@ Main CSS
 body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    background-color: #e4fde1;
+    background-color: #907ad6;
+    color: #2c2a4a;
     /* background: linear-gradient(95deg, #6ae1ba, #e4fde1, #e4fde1, #6ae1ba); */
 }
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: #2c2a4a;
 }
 html, body, section {
     block-size: 100%;
@@ -159,7 +160,7 @@ body::-webkit-scrollbar {
     display: grid;
     grid-template-rows: 1;
     grid-template-columns: 20% 60% 20%;
-    background: rgba(106, 225, 186, 0.43);
+    background: #dabfff75;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(14.2px);
     -webkit-backdrop-filter: blur(14.2px);
@@ -311,28 +312,35 @@ body::-webkit-scrollbar {
     background-image: url(line.png);
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
 }
 
-.c1-section-1 div{
-    grid-column: 4/8;
-    grid-row: 3/10;
-    display: flex;
-    flex-direction: column;
-    background-image: url(card\ bg.png);
+.c1-side{
+    background-image: url(skills.png);
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.c1-section-1 div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
 .c1-section-1 div div{
-    width: 60%;
+    width: auto;
     margin: auto;
     padding: 20px;
-    background: rgba(106, 225, 186, 0.08);
-    background: rgba(106, 225, 186, 0);
+    background: rgba(218, 191, 255, 0.44);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.3px);
     -webkit-backdrop-filter: blur(5.3px);
-    border: 1px solid rgba(106, 225, 186, 0.07);
+    border: 1px solid rgba(218, 191, 255, 0.17);
 }
 
 .c1-section-1 div p{
@@ -396,7 +404,7 @@ body::-webkit-scrollbar {
     width: 200px;
     height: 5px;
     border-radius: 5px;
-    background-color: #6AE1BA;
+    background-color: #DABFFF;
     position: relative;
 }
 
@@ -425,10 +433,50 @@ body::-webkit-scrollbar {
 
 .bar-2{
     position: absolute;
-    background-color: #9af8cc;
+    background-color: #907AD6;
     width: 160px;
     height: 5px;
     border-radius: 5px;
-    top: 0;
-    left: 0;
+}
+
+
+
+@keyframes throw {
+    0%{
+        
+        top: 85%;
+    }
+    50%{
+        top: 10%;
+    }
+    100%{
+        top: 85%;
+    }
+}
+.c1-side img{
+    position: absolute;
+}
+.c1-side img:nth-child(1){
+    left: 51vw;
+    animation: throw 10s ease-in-out infinite forwards;
+}
+
+.c1-side img:nth-child(2){
+    left: 47vw;
+    animation: throw 5s ease-in-out infinite forwards;
+}
+
+.c1-side img:nth-child(3){
+    left: 51vw;
+    animation: throw 14s ease-in-out infinite forwards;
+}
+
+.c1-side img:nth-child(4){
+    left: 47vw;
+    animation: throw 8s ease-in-out infinite forwards;
+}
+
+.c1-side img:nth-child(5){
+    left: 51vw;
+    animation: throw 18s ease-in-out infinite forwards;
 }
