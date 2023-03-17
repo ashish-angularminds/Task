@@ -128,9 +128,7 @@ Main CSS
 body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    background-color: #907ad6;
     color: #2c2a4a;
-    /* background: linear-gradient(95deg, #6ae1ba, #e4fde1, #e4fde1, #6ae1ba); */
 }
 
 a {
@@ -166,7 +164,6 @@ body::-webkit-scrollbar {
     -webkit-backdrop-filter: blur(14.2px);
     border: 1px solid rgba(106, 225, 186, 0.05);
     position: fixed;
-    top: 0;
 }
 
 .nav-title{
@@ -223,8 +220,8 @@ body::-webkit-scrollbar {
 }
 
 .page-list ul li span{
-    position: absolute;
-    top:0px;
+    position:absolute;
+    top:0;
     height: 2px;
     width: 0px;
     margin-bottom: 5px;
@@ -236,6 +233,7 @@ body::-webkit-scrollbar {
 
 .tit{
     height: 100vh;
+    background: linear-gradient(45deg, #907AD6 49%, #efc3e6 , #DABFFF 50% 100%);
 }
 .title-section{
     width: 100%;
@@ -306,7 +304,12 @@ body::-webkit-scrollbar {
 .column-2{
 }
 
-
+.column-1 section:nth-child(1){
+    background: linear-gradient(135deg, #907AD6 49%, #efc3e6 , #DABFFF 50% 100%);
+}
+.column-1 section:nth-child(2){
+    background: linear-gradient(45deg, #907AD6 49%, #efc3e6 , #DABFFF 50% 100%);
+}
 
 .c1-section-1{
     background-image: url(line.png);
@@ -335,20 +338,17 @@ body::-webkit-scrollbar {
     width: auto;
     margin: auto;
     padding: 20px;
-    background: rgba(218, 191, 255, 0.44);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.3px);
-    -webkit-backdrop-filter: blur(5.3px);
-    border: 1px solid rgba(218, 191, 255, 0.17);
+    
 }
 
 .c1-section-1 div p{
     margin: 15px 50px;
+    justify-content: end;
 }
 
 .c1-section-1 div a{
     margin: 15px 50px;
+    justify-content: end;
 }
 
 .c1-section-1 div p img{
@@ -443,40 +443,33 @@ body::-webkit-scrollbar {
 
 @keyframes throw {
     0%{
-        
-        top: 85%;
+        rotate: 10deg;
     }
     50%{
-        top: 10%;
+        rotate: -10deg;
     }
     100%{
-        top: 85%;
+        rotate: 10deg;
     }
 }
 .c1-side img{
-    position: absolute;
 }
 .c1-side img:nth-child(1){
-    left: 51vw;
-    animation: throw 10s ease-in-out infinite forwards;
+    animation: throw 2s ease-in-out infinite forwards;
 }
 
 .c1-side img:nth-child(2){
-    left: 47vw;
-    animation: throw 5s ease-in-out infinite forwards;
+    animation: throw 3s ease-in-out infinite forwards;
 }
 
 .c1-side img:nth-child(3){
-    left: 51vw;
-    animation: throw 14s ease-in-out infinite forwards;
+    animation: throw 2s ease-in-out infinite forwards;
 }
 
 .c1-side img:nth-child(4){
-    left: 47vw;
-    animation: throw 8s ease-in-out infinite forwards;
+    animation: throw 3s ease-in-out infinite forwards;
 }
 
 .c1-side img:nth-child(5){
-    left: 51vw;
-    animation: throw 18s ease-in-out infinite forwards;
+    animation: throw 2s ease-in-out infinite forwards;
 }
